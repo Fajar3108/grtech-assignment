@@ -20,12 +20,14 @@ class UserSeeder extends Seeder
                 'name' => 'Admin GRTech',
                 'email' => 'admin@grtech.com',
                 'password' => bcrypt('password'),
+                'role' => 'admin',
             ],
             [
                 'id' => Str::uuid(),
                 'name' => 'User GRTech',
                 'email' => 'user@grtech.com',
                 'password' => bcrypt('password'),
+                'role' => 'user',
             ],
         ]);
     }
