@@ -19,7 +19,10 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
+        return Inertia::render('Dashboard', [
+            'totalCompany' => App\Models\Company::count(),
+            'totalEmployee' => App\Models\Employee::count(),
+        ]);
     })->name('dashboard');
 
     Route::middleware([AdminMiddleware::class])->group(function () {
