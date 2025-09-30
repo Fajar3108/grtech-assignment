@@ -17,8 +17,8 @@ defineProps({
 });
 
 const form = useForm({
-    email: '',
-    password: '',
+    email: 'admin@grtech.com',
+    password: 'password',
     remember: false,
 });
 
