@@ -58,8 +58,6 @@ class CompanyController extends Controller
             $data['logo'] = $path;
         }
 
-
-
         $company->update($data);
         return Redirect::back()->with('success', 'Company updated successfuly');
     }
