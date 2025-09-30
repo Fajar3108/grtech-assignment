@@ -5,8 +5,6 @@ import { reactive } from "vue";
 import { UploadOutlined } from "@ant-design/icons-vue";
 import FormCompany from "./Partials/Form.vue";
 
-
-
 const form = useForm({
   email: "",
   name: "",

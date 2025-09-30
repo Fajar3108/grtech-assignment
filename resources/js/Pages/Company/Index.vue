@@ -57,10 +57,7 @@ const goToPage = (page) => {
 const showEditModal = (record) => {
   isEditOpen.value = true;
 
-  formEdit.id = record.id;
-  formEdit.name = record.name;
-  formEdit.email = record.email;
-  formEdit.website = record.website;
+  Object.assign(formEdit, record)
   formEdit.logo = record.logo
     ? [
         {
