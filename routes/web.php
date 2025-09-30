@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Foundation\Application;
@@ -23,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware([AdminMiddleware::class])->group(function () {
         Route::resource('company', CompanyController::class)->except('show', 'edit');
+        Route::resource('employee', EmployeeController::class)->except('show', 'edit');
     });
 });
 

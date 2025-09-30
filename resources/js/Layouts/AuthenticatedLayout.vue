@@ -39,8 +39,16 @@ const showingNavigationDropdown = ref(false);
                 <NavLink
                   :href="route('company.index')"
                   :active="route().current('company.index')"
+                  v-if="$page.props.auth.user.role === 'admin'"
                 >
                   Company
+                </NavLink>
+                <NavLink
+                  :href="route('employee.index')"
+                  :active="route().current('employee.index')"
+                  v-if="$page.props.auth.user.role === 'admin'"
+                >
+                  Employee
                 </NavLink>
               </div>
             </div>
@@ -141,6 +149,20 @@ const showingNavigationDropdown = ref(false);
               :active="route().current('dashboard')"
             >
               Dashboard
+            </ResponsiveNavLink>
+            <ResponsiveNavLink
+              :href="route('company.index')"
+              :active="route().current('company.index')"
+              v-if="$page.props.auth.user.role === 'admin'"
+            >
+              Company
+            </ResponsiveNavLink>
+            <ResponsiveNavLink
+              :href="route('employee.index')"
+              :active="route().current('employee.index')"
+              v-if="$page.props.auth.user.role === 'admin'"
+            >
+              Employee
             </ResponsiveNavLink>
           </div>
 

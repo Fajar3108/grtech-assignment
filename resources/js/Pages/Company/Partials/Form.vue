@@ -7,7 +7,8 @@ const props = defineProps({
     default: () => ({}),
   },
   action: String,
-  className: String
+  className: String,
+  companies: Array,
 });
 
 const emit = defineEmits(["submit"]);
@@ -20,7 +21,6 @@ const emit = defineEmits(["submit"]);
     :model="form"
     layout="vertical"
     :class="className"
-    method="post"
   >
     <a-form-item
       label="Name"
