@@ -20,4 +20,5 @@
     <li>Setting integration in .env file for email verification (I'm using mailtrap.io for development testing)</li>
     <li>"php artisan serve"</li>
     <li>"npm run dev"</li>
+    <li>"php artisan queue:work --queue=high,default"</li>
 </ol>
